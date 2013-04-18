@@ -1,5 +1,5 @@
 <?php
-   /*
+/*
    Plugin Name: Responsive Mobile-Friendly Tooltip
    Plugin URI: GITHUB
    Description: Responsive and mobile-friendly tooltip to present tiny amount of hidden content - the tip.
@@ -8,7 +8,7 @@
    Author URI: itayxd.com
    License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-   */
+*/
 
 /*-------------------- Adds the shortcode --------------------*/
 
@@ -61,11 +61,6 @@ function RMFtooltip_stylesheet_js() {
 	wp_enqueue_style( 'RMFtooltip-css' );
 	wp_register_script( 'RMFtooltip-js', plugins_url('responsive-tooltip.js', __FILE__), 'jquery', null, true );
 	wp_enqueue_script( 'RMFtooltip-js' );
-}/*
-function blah() {
-	echo "<script src='".plugins_url('responsive-tooltip.js', __FILE__)."' type='text/javascript'></script>";
-	echo "<link rel='stylesheet' type='text/css' href='".plugins_url('responsive-tooltip.css', __FILE__)."'>";
 }
-add_action( 'wp_footer', 'blah' );*/
 
 
