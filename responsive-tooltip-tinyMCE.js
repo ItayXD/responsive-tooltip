@@ -46,7 +46,7 @@
 				longname : "Responsive Mobile-Friendly Tooltip",
 				author : 'ItayXD',
 				authorurl : 'itayxd.com',
-				infourl : 'GITHUB',
+				infourl : 'https://github.com/ItayXD/responsive-tooltip',
 				version : "1.0"
 			};
 		}
