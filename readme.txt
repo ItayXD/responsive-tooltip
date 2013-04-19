@@ -3,6 +3,7 @@ Contributors: ItayXD, Osvaldas
 Tags: Tooltip, tinyMCE, responsive, mobile-friendly
 Requires at least: 3.0.1
 Tested up to: 3.5.1
+Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +22,7 @@ tooltips are used to present a tiny amount of hidden content (mainly explanatory
 ###Advance
 *	The button adds a WordPress short-code, if you want the tip to be HTML formated (avoid block level elements) you can just wrap it with [tooltip tip="<your tip>"]<your text>[/tooltip] in tinyMCE.
 *	You can also assign the attribute rel="tooltip" and title="Enter your tip here" to any of body tags in HTML file where you want the tooltip to pop up when called.
+*	You can change the pop-up look by editing responsive-tooltip.css. change it to what ever suits your website best!
 
 ##Credits
 Thanks to [Osvaldas]( http://osvaldas.info/) who made the Js and the CSS. WordPress plugin adoption by [me](itayxd.com).
@@ -29,13 +31,15 @@ Thanks to [Osvaldas]( http://osvaldas.info/) who made the Js and the CSS. WordPr
 
 1. Upload the unzipped folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Check out your new button on the WordPress editor.
+3. Check out your new button on the WordPress editor.	
 
 == Frequently Asked Questions ==
 
 Non I can think of, contact for help.
 
 == Screenshots ==
+1. The tooltip in action.
+2. The editor dialog.
 
 == Changelog ==
 
