@@ -1,3 +1,4 @@
+##Responsive Mobile-Friendly Tooltip Plug-in for WordPress
 A WordPress plugin that helps you create responsive and mobile-friendly tooltips.
 tooltips are used to present a tiny amount of hidden content (mainly explanatory, so-called tips), that pops up when user moves a cursor over or clicks (less common) on a special target.
 
@@ -12,5 +13,5 @@ tooltips are used to present a tiny amount of hidden content (mainly explanatory
 *	You can also assign the attribute rel="tooltip" and title="Enter your tip here" to any of body tags in HTML file where you want the tooltip to pop up when called.
 *	You can change the pop-up look by editing responsive-tooltip.css. change it to what ever suits your website best!
 
-##Credits
+####Credits
 Thanks to [Osvaldas]( http://osvaldas.info/) who made the Js and the CSS. WordPress plugin adoption by [me](itayxd.com).
