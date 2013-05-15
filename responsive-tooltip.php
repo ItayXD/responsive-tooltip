@@ -21,19 +21,19 @@ function RMFtooltip_shortcode_function($atts, $content = null) {
 		return $return;
 	}
 }
-function register_shortcodes(){
+function RMFtooltip_register_shortcode(){
    add_shortcode('tooltip', 'RMFtooltip_shortcode_function');
 }
-add_action( 'init', 'register_shortcodes');
+add_action( 'init', 'RMFtooltip_register_shortcode');
 
 
 /*-------------------- Adds the TinyMCE plugin --------------------*/
 
-function register_button( $buttons ) {
+function RMFtooltip_register_button( $buttons ) {
    array_push( $buttons, "|", "RMFtooltip" );
    return $buttons;
 }
-function add_plugin( $plugin_array ) {
+function RMFtooltip_add_plugin( $plugin_array ) {
    $plugin_array['RMFtooltip'] = plugins_url( 'responsive-tooltip-tinyMCE.js' , __FILE__ );
    return $plugin_array;
 }
@@ -44,13 +44,15 @@ function RMFtooltip_button() {
    }
 
    if ( get_user_option('rich_editing') == 'true' ) {
-      add_filter( 'mce_external_plugins', 'add_plugin' );
-      add_filter( 'mce_buttons', 'register_button' );
+      add_filter( 'mce_external_plugins', 'RMFtooltip_add_plugin' );
+      add_filter( 'mce_buttons', 'RMFtooltip_register_button' );
    }
 
 }
 add_action('init', 'RMFtooltip_button');
 
+/*-------------------- Adds admin options page  --------------------*/
+include_once 'responsive-tooltip-admin-page.php';
 
 /*-------------------- Adds needed stylesheets and Js  --------------------*/
 

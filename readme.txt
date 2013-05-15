@@ -3,7 +3,7 @@ Contributors: ItayXD, Osvaldas
 Tags: Tooltip, tinyMCE, responsive, mobile-friendly
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 0.2
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,10 @@ Non I can think of, contact for help.
 2. The editor dialog.
 
 == Changelog ==
+
+= 1.0 =
+*	Adds CSS editor and style options (image in tooltip coming soon).
+
 = 0.2 =
 *	Bug fix - fix tip flashing when the target (the content to be hovered) is a block level element.
 
