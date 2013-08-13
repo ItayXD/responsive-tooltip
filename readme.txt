@@ -43,6 +43,9 @@ Non I can think of, contact for help.
 
 == Changelog ==
 
+= 1.2 =
+*	Bug fix- Fixed the blinking\flashing tip (Hopefully).
+
 = 1.1 =
 *	Bug fix - fixed problem when using '.
 
