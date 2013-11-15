@@ -19,6 +19,7 @@
 						draggable: false,
 						resizable: false,
 						modal: true,
+						dialogClass: 'wp-dialog',
 						buttons: {
 							"OK": function() {
 								RMFtooltip_text = jQuery("#RMFtooltip_text").val();

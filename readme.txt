@@ -3,7 +3,7 @@ Contributors: ItayXD
 Tags: Tooltip, tinyMCE, responsive, mobile-friendly
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ Non I can think of, contact for help.
 2. The editor dialog.
 
 == Changelog ==
+
+= 1.2 =
+*	Bug fix- Dialog underlay.
 
 = 1.2 =
 *	Bug fix- Fixed the blinking\flashing tip (Hopefully).
