@@ -3,7 +3,7 @@
    Plugin Name: Responsive Mobile-Friendly Tooltip
    Plugin URI: https://github.com/ItayXD/responsive-tooltip
    Description: Responsive and mobile-friendly tooltip to present tiny amount of hidden content - the tip.
-   Version: 1.6
+   Version: 1.6.1
    Author: ItayXD
    Author URI: itayxd.com
    License: GPLv2 or later
@@ -84,7 +84,7 @@ function RMFtooltip_admin__stylesheet() {
    wp_enqueue_style( 'RMFtooltip-admin-css' );
 }
 /*-------------------- Version Handling --------------------*/
-$c_version = 1.6; // Current version
+$c_version = 1.6.1; // Current version
 $o_version = get_option(RMFtooltip_version); //Gets old version
 if ( $c_version > $o_version ) {
    update_option('RMFtooltip_version', $c_version);

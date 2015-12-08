@@ -27,7 +27,7 @@ jQuery( document ).ready( function()
                 tooltip.css( 'max-width', 340 );
  
             var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
-                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+                pos_top  = target.offset().top - jQuery(document).scrollTop() - tooltip.outerHeight() - 20;
  
             if( pos_left < 0 )
             {

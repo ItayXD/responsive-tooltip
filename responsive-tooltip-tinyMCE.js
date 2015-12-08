@@ -111,7 +111,7 @@ var RMFtooltip;
 				author : 'ItayXD',
 				authorurl : 'itayxd.com',
 				infourl : 'https://github.com/ItayXD/responsive-tooltip',
-				version : "1.6"
+				version : "1.6.1"
 			};
 		}
 	});
