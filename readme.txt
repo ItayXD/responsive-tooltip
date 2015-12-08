@@ -2,8 +2,8 @@
 Contributors: ItayXD
 Tags: Tooltip, tinyMCE, responsive, mobile-friendly
 Requires at least: 3.0.1
-Tested up to: 3.5.1
-Stable tag: 1.3
+Tested up to: 4.3.1
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,7 +43,25 @@ Non I can think of, contact for help.
 
 == Changelog ==
 
-= 1.2 =
+= 1.6 =
+* Both "Invert" and "Hover" attributes are deprecated.
+* Hopefully all bugs fixed.
+* Dialog is working again.
+
+= 1.5.2 =
+* added the ajax folder we.. lost
+
+= 1.5.1 =
+*	Allow the "hover" attribute to provide nested shortcode available in bubble content
+*	"invert" attribute is still available but it's deprecated
+
+= 1.5 =
+*	Allow the "invert" attribute to provide nested shortcode available in bubble content
+
+= 1.4 =
+*	Nested Shortcodes in tooltip base content (not the bubble content)
+
+= 1.3 =
 *	Bug fix- Dialog underlay.
 
 = 1.2 =
