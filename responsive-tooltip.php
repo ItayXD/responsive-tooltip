@@ -84,8 +84,8 @@ function RMFtooltip_admin__stylesheet() {
    wp_enqueue_style( 'RMFtooltip-admin-css' );
 }
 /*-------------------- Version Handling --------------------*/
-$c_version = 1.6.1; // Current version
-$o_version = get_option(RMFtooltip_version); //Gets old version
+$c_version = '1.6.1'; // Current version
+$o_version = get_option('RMFtooltip_version'); //Gets old version
 if ( $c_version > $o_version ) {
    update_option('RMFtooltip_version', $c_version);
    $RMFtooltip_style_settings = get_option('RMFtooltip_style_settings'); //Genrate user's custom CSS file
