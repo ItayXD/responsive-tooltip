@@ -37,21 +37,23 @@ function RMFtooltip_admin_init(){
 	add_settings_section('RMFtooltip_style_settings', 'Tooltip Style Settings', 'style_settings_title', 'RMFtooltip-options'); //Register the setting section
 	global $RMFtooltip_style_settings;
 	$RMFtooltip_style_settings = get_option('RMFtooltip_style_settings'); //Gets old options
-	$RMFtooltip_style_settings[chkbx_use_custom_css] = $RMFtooltip_style_settings[chkbx_use_custom_css] ? 'on' : 'off';
+	$RMFtooltip_style_settings['chkbx_use_custom_css'] = ! empty( $RMFtooltip_style_settings['chkbx_use_custom_css'] ) ? 'on' : 'off';
+	if ( ! isset( $RMFtooltip_style_settings['chkbx_replace_css'] ) ) $RMFtooltip_style_settings['chkbx_replace_css'] = 'off';
+	if ( ! isset( $RMFtooltip_style_settings['textarea_css'] ) ) $RMFtooltip_style_settings['textarea_css'] = '';
 	register_setting( 'RMFtooltip_style_settings', 'RMFtooltip_style_settings', 'RMFtooltip_input_processor' ); //Does all the saving =D
 		function RMFtooltip_input_processor ($input) { //Process user data
 			global $RMFtooltip_style_settings;
-			if ( $input[chkbx_use_custom_css] == 'on' && empty($input[textarea_css])) { //Makes sure the textarea isn't empty if it suppose to be full 
+			if ( $input['chkbx_use_custom_css'] == 'on' && empty($input['textarea_css'])) { //Makes sure the textarea isn't empty if it suppose to be full 
 				add_settings_error( 'textarea_css', 'textarea_css_empty', "You haven't entered any CSS code, either enter some code or uncheck the use custom CSS box. Your settings will NOT be saved." ); //Output an error
 				return $RMFtooltip_style_settings; //Save the old settings again since invalid settings has been entred
 			}
 			/*----------Save css to file------------*/
-			if ($input[chkbx_use_custom_css] == 'on') {
-			   if ($input[chkbx_replace_css] == 'on') {
-			    	$css_file = $input[textarea_css]; //Writes only the new changes
+			if ($input['chkbx_use_custom_css'] == 'on') {
+			   if ($input['chkbx_replace_css'] == 'on') {
+			    	$css_file = $input['textarea_css']; //Writes only the new changes
 			    } else {
 			  		$css_file = file_get_contents(plugin_dir_path(__FILE__) . 'responsive-tooltip.org.css');
-				    $css_file .= "\n{$input[textarea_css]}"; //Adds the entered code at the end of the original code
+				    $css_file .= "\n{$input['textarea_css']}"; //Adds the entered code at the end of the original code
 			    }
 			} else { //Else writes the original file
 				$css_file = file_get_contents(plugin_dir_path(__FILE__) . 'responsive-tooltip.org.css'); //Writes only the original file
@@ -85,7 +87,7 @@ function RMFtooltip_admin_init(){
 						<label for="chkbx_use_custom_css">Use custom CSS?</label>
 					</th>
 					<td>
-						<input type="checkbox" id="chkbx_use_custom_css" onclick="chkchng()" name="RMFtooltip_style_settings[chkbx_use_custom_css]" <?php checked( $RMFtooltip_style_settings[chkbx_use_custom_css], 'on' ); ?> />
+						<input type="checkbox" id="chkbx_use_custom_css" onclick="chkchng()" name="RMFtooltip_style_settings[chkbx_use_custom_css]" <?php checked( $RMFtooltip_style_settings['chkbx_use_custom_css'], 'on' ); ?> />
 						<p class="description">Check if you want to use your own custom stylesheet for the tooltip.</p>
 					</td>
 				</tr>
@@ -99,7 +101,7 @@ function RMFtooltip_admin_init(){
 						<label for="chkbx_replace_css">Replace original CSS?</label>
 					</th>
 					<td>
-						<input type="checkbox" id="chkbx_replace_css" name="RMFtooltip_style_settings[chkbx_replace_css]" <?php checked( $RMFtooltip_style_settings[chkbx_replace_css], 'on' ); ?> <?php disabled( $RMFtooltip_style_settings[chkbx_use_custom_css], 'off'); ?> />
+						<input type="checkbox" id="chkbx_replace_css" name="RMFtooltip_style_settings[chkbx_replace_css]" <?php checked( $RMFtooltip_style_settings['chkbx_replace_css'], 'on' ); ?> <?php disabled( $RMFtooltip_style_settings['chkbx_use_custom_css'], 'off'); ?> />
 						<p class="description">Check if want to replace the default CSS rules rather than add to them</p>
 					</td>
 				</tr>
@@ -113,7 +115,7 @@ function RMFtooltip_admin_init(){
 						<label for="textarea_css">Your CSS code</label>
 					</th>
 					<td>
-						<textarea id="textarea_css" class="large-text" name="RMFtooltip_style_settings[textarea_css]" cols="50" rows="15" placeholder="Enter your css code here" <?php disabled( $RMFtooltip_style_settings[chkbx_use_custom_css], 'off'); ?> ><?php echo esc_textarea( $RMFtooltip_style_settings[textarea_css] ); ?></textarea>
+						<textarea id="textarea_css" class="large-text" name="RMFtooltip_style_settings[textarea_css]" cols="50" rows="15" placeholder="Enter your css code here" <?php disabled( $RMFtooltip_style_settings['chkbx_use_custom_css'], 'off'); ?> ><?php echo esc_textarea( $RMFtooltip_style_settings['textarea_css'] ); ?></textarea>
 					</td>
 				</tr>
 				<?php
