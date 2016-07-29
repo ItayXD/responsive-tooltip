@@ -71,6 +71,6 @@ jQuery( document ).ready( function()
         };
  
         target.bind( 'mouseleave', remove_tooltip );
-        tooltip.bind( 'click', remove_tooltip );
+        tooltip.bind( 'click', function(){ remove_tooltip(); });
     });
 });
