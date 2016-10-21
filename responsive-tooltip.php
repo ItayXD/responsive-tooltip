@@ -115,7 +115,7 @@ function rmf_tooltip_dialog() { //Creates the dialog (HTML)
       </div>
       <div id="tip-creator">
          <div id="tip-options">
-            <p class="howto"><?php _e( 'The tip will pop up will the text is hovered' ); ?></p>
+            <p class="howto"><?php _e( 'The tip will pop up when the text is hovered' ); ?></p>
             <div>
                <label><span><?php _e( 'The tip' ); ?></span><input id="rmf-tooltip-tip" type="text" /></label>
             </div>
