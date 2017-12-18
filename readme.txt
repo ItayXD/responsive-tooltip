@@ -3,7 +3,7 @@ Contributors: ItayXD
 Tags: Tooltip, tinyMCE, responsive, mobile-friendly
 Requires at least: 3.0.1
 Tested up to: 4.3.1
-Stable tag: 1.6.1
+Stable tag: 1.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,9 +24,6 @@ tooltips are used to present a tiny amount of hidden content (mainly explanatory
 *	You can also assign the attribute rel="tooltip" and title="Enter your tip here" to any of body tags in HTML file where you want the tooltip to pop up when called.
 *	You can change the pop-up look by editing responsive-tooltip.css. change it to what ever suits your website best!
 
-##Credits
-Thanks to [Osvaldas]( http://osvaldas.info/) who made the Js and the CSS. WordPress plugin adoption by [me](itayxd.com).
-
 == Installation ==
 
 1. Upload the unzipped folder to the `/wp-content/plugins/` directory.
@@ -43,7 +40,14 @@ Non I can think of, contact for help.
 
 == Changelog ==
 
-= 1.6.1 =
+= 1.6.5 =
+* Fix admin panel.
+
+= 1.6.5 =
+* Fix arrow in down position.
+
+
+= 1.6.2 =
 * Fix up position.
 
 = 1.6 =

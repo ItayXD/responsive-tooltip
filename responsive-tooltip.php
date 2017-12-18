@@ -3,7 +3,7 @@
    Plugin Name: Responsive Mobile-Friendly Tooltip
    Plugin URI: https://github.com/ItayXD/responsive-tooltip
    Description: Responsive and mobile-friendly tooltip to present tiny amount of hidden content - the tip.
-   Version: 1.6.1
+   Version: 1.6.6
    Author: ItayXD
    Author URI: itayxd.com
    License: GPLv2 or later
@@ -84,17 +84,17 @@ function RMFtooltip_admin__stylesheet() {
    wp_enqueue_style( 'RMFtooltip-admin-css' );
 }
 /*-------------------- Version Handling --------------------*/
-$c_version = '1.6.1'; // Current version
+$c_version = 1.66; // Current version
 $o_version = get_option('RMFtooltip_version'); //Gets old version
 if ( $c_version > $o_version ) {
    update_option('RMFtooltip_version', $c_version);
    $RMFtooltip_style_settings = get_option('RMFtooltip_style_settings'); //Genrate user's custom CSS file
-   if ($RMFtooltip_style_settings[chkbx_use_custom_css] == 'on') {
-      if ($RMFtooltip_style_settings[chkbx_replace_css] == 'on') {
-         $css_file = $RMFtooltip_style_settings[textarea_css]; //Writes only the new changes
+   if ($RMFtooltip_style_settings['chkbx_use_custom_css'] == 'on') {
+      if ($RMFtooltip_style_settings['chkbx_replace_css'] == 'on') {
+         $css_file = $RMFtooltip_style_settings['textarea_css']; //Writes only the new changes
        } else {
          $css_file = file_get_contents(plugin_dir_path(__FILE__) . 'responsive-tooltip.org.css');
-          $css_file .= "\n{$RMFtooltip_style_settings[textarea_css]}"; //Adds the entered code at the end of the original code
+          $css_file .= "\n{$RMFtooltip_style_settings['textarea_css']}"; //Adds the entered code at the end of the original code
        }
    } else { //Else writes the original file
       $css_file = file_get_contents(plugin_dir_path(__FILE__) . 'responsive-tooltip.org.css'); //Writes only the original file

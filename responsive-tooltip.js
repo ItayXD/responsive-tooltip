@@ -21,37 +21,36 @@ jQuery( document ).ready( function()
  
         var init_tooltip = function()
         {
-            if( jQuery( window ).width() < tooltip.outerWidth() * 1.5 )
+            if( jQuery( window ).width() < tooltip.outerWidth() * 1.5 ) {
                 tooltip.css( 'max-width', jQuery( window ).width() / 2 );
-            else
+            } else {
                 tooltip.css( 'max-width', 340 );
+            }
  
-            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
-                pos_top  = target.offset().top - jQuery(document).scrollTop() - tooltip.outerHeight() - 20;
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 );
+            var pos_top  = target.offset().top - jQuery(document).scrollTop() - tooltip.outerHeight() - 20;
  
-            if( pos_left < 0 )
-            {
+            if( pos_left < 0 ) {
                 pos_left = target.offset().left + target.outerWidth() / 2 - 20;
                 tooltip.addClass( 'left' );
-            }
-            else
+            } else {
                 tooltip.removeClass( 'left' );
+            }
  
-            if( pos_left + tooltip.outerWidth() > jQuery( window ).width() )
-            {
+            if( pos_left + tooltip.outerWidth() > jQuery( window ).width() ) {
                 pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
                 tooltip.addClass( 'right' );
+            } else {
+                tooltip.removeClass( 'right');
             }
-            else
-                tooltip.removeClass( 'right' );
  
-            if( pos_top < 0 )
-            {
+            if( pos_top < 0 ) {
                 var pos_top  = target.offset().top + target.outerHeight();
                 tooltip.addClass( 'top' );
-            }
-            else
+            } else {
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
                 tooltip.removeClass( 'top' );
+            }
  
             tooltip.css( { left: pos_left, top: pos_top } )
                    .animate( { top: '+=10', opacity: 1 }, 50 );
@@ -71,6 +70,6 @@ jQuery( document ).ready( function()
         };
  
         target.bind( 'mouseleave', remove_tooltip );
-        tooltip.bind( 'click', function(){ remove_tooltip(); });
+        tooltip.bind( 'click', remove_tooltip );
     });
 });

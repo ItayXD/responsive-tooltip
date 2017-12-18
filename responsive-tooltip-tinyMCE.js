@@ -48,7 +48,7 @@ var RMFtooltip;
 			this.textarea = $( '#' + window.wpActiveEditor ).get( 0 );
 
 			if ( typeof tinymce !== 'undefined' ) {
-				// Make sure the link wrapper is the last element in the body,
+				// Make sure the tooltip wrapper is the last element in the body,
 				// or the inline editor toolbar may show above the backdrop.
 				$body.append( inputs.backdrop, inputs.wrap );
 
@@ -111,7 +111,7 @@ var RMFtooltip;
 				author : 'ItayXD',
 				authorurl : 'itayxd.com',
 				infourl : 'https://github.com/ItayXD/responsive-tooltip',
-				version : "1.6.1"
+				version : "1.6.6"
 			};
 		}
 	});

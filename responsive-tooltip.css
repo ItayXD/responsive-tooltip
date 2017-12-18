@@ -1,5 +1,5 @@
 abbr {
-    border-bottom: 1px dotted #111111 !important;
+    border-bottom: 1px dotted #111111;
     cursor: help;
     display: inline-block;
 }
